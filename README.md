@@ -14,5 +14,16 @@ The port argument is optional and when not included the service will default to 
 
 ```dummyserv <port>```
 
+# Docker instructions
 
+## How to build
+```docker build -t hello_http .```
 
+If docker build is not pulling latest git commit from hello_http repository, build with --no-cache
+
+## Running the server
+```docker run -dp 12344:12344 --name=dummyserv hello_http /usr/bin/dummyserv 12344```
+
+Or, first create the container, then start it:
+```docker create -p 12344:12344 --name=dummyserv hello_http /usr/bin/dummyserv 12344```
+```docker start dummyserv```
