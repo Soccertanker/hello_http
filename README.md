@@ -25,5 +25,7 @@ If docker build is not pulling latest git commit from hello_http repository, bui
 ```docker run -dp 12344:12344 --name=dummyserv hello_http /usr/bin/dummyserv 12344```
 
 Or, first create the container, then start it:
+
 ```docker create -p 12344:12344 --name=dummyserv hello_http /usr/bin/dummyserv 12344```
+
 ```docker start dummyserv```
