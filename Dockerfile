@@ -1,9 +1,8 @@
 # https://hub.docker.com/_/fedora
 FROM fedora:latest
-
-RUN dnf -y update
+WORKDIR /code
 RUN dnf -y install git bash python3.7 gcc
-WORKDIR /home
-RUN git clone https://github.com/Soccertanker/hello_http.git
-WORKDIR /home/hello_http
+COPY . .
 RUN make && make install
+EXPOSE 12344
+CMD ["/usr/bin/dummyserv", "12344"]
