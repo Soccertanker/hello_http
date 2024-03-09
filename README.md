@@ -20,11 +20,11 @@ The port argument is optional and when not included the service will default to 
 ```docker build -t hello_http .```
 
 ## Running the server
-```docker run -dp 12344:12344 --name=dummyserv hello_http /usr/bin/dummyserv 12344```
+```docker run -dp 12344:12344 --name=dummyserv hello_http```
 
 Or, first create the container, then start it:
 
-```docker create -p 12344:12344 --name=dummyserv hello_http /usr/bin/dummyserv 12344```
+```docker create -p 12344:12344 --name=dummyserv hello_http```
 
 ```docker start dummyserv```
 

@@ -12,7 +12,7 @@ provider "docker" {}
 resource "docker_image" "fedora_builder" {
   name = "fedora_builder"
   build {
-    context = "."
+    context = ".."
   }
 }
 
