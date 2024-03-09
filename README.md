@@ -31,6 +31,8 @@ Or, first create the container, then start it:
 # Terraform instructions
 
 ## Build and Deploy
+```cd docker```
+
 ```terraform init```
 
 ```terraform plan```
