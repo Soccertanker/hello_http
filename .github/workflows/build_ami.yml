@@ -1,6 +1,9 @@
 name: Build Our AMI 
 run-name: ${{ github.actor }} is building AMI
-on: [push]
+on:
+  pull_request:
+    types:
+      - closed
 jobs:
   BuildMyAppContainerImage:
     runs-on: ubuntu-latest
