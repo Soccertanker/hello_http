@@ -48,4 +48,4 @@ Open localhost:12344 in browser to view the dummy server's response.
 
 ```packer init .```
 
-```packer build packer.pkg.hcl```
+```packer build packer.pkr.hcl```
