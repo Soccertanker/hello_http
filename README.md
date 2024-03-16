@@ -46,6 +46,8 @@ Open localhost:12344 in browser to view the dummy server's response.
 
 # Packer instructions
 
+These instructions build an AMI. They require AWS credentials.
+
 ```packer init .```
 
 ```packer build packer.pkr.hcl```
