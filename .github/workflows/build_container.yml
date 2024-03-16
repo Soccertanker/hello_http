@@ -17,9 +17,9 @@ jobs:
       - name: Build Image
         run: docker build -t hello_http .
       - name: Save docker file
-        run: docker image save hello_http > img/hello_http.tar
+        run: docker image save hello_http > docker/hello_image.tar
       - name: Archive buid artifact
         uses: actions/upload-artifact@v4
         with:
           name: hello_http.tar
-          path: img/hello_http.tar
+          path: docker/hello_image.tar
