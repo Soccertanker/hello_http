@@ -1,0 +1,25 @@
+name: Build Our Container 
+run-name: ${{ github.actor }} is building and uploading
+on:
+  pull_request:
+    types: [opened, reopened]
+jobs:
+  BuildMyAppContainerImage:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Starting container build"
+      - name: Setup Code
+        uses: actions/checkout@v4
+      - name: Check that checkout worked
+        run: ls -lh
+      - name: Get Docker
+        run: sudo apt install -y docker
+      - name: Build Image
+        run: docker build -t ghar hello_http .
+      - name: Save docker file
+        run: docker image save hello_http > img/hello_http.tar
+      - name: Archive buid artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello_http.tar
+          path: img/hello_http.tar
