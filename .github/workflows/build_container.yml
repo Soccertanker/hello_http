@@ -15,7 +15,7 @@ jobs:
       - name: Get Docker
         run: sudo apt install -y docker
       - name: Build Image
-        run: docker build -t ghar hello_http .
+        run: docker build -t hello_http .
       - name: Save docker file
         run: docker image save hello_http > img/hello_http.tar
       - name: Archive buid artifact
