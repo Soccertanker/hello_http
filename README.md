@@ -43,3 +43,9 @@ Open localhost:12344 in browser to view the dummy server's response.
 
 ## Clean Env
 ```terraform destroy```
+
+# Packer instructions
+
+```packer init .```
+
+```packer build packer.pkg.hcl```
